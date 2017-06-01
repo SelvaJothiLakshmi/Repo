@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "cust" class="SpringNewPrject.SpringNewPrject1.Custom" autowire="byName" scope="prototype">
+<property name="custmerId" value="1001"></property>
+<property name="custName" value="custm1"></property>
+<!-- <property name="address" ref="address"></property>  -->
+
+<!-- <constructor-arg name="custmerId" value="1001"/>
+<constructor-arg name="custName" value="custm1"/>
+<constructor-arg name="address" ref="address"/> -->
+</bean>
+
+<bean id = "address" class="SpringNewPrject.SpringNewPrject1.Address" init-method="init" destroy-method="destroy">
+ <property name="doorNo" value="26"></property>
+<property name="streetName" value="MystreetName"></property> 
+
+<!-- <constructor-arg name="doorNo" value="26"/>
+<constructor-arg name="streetName" value="MystreetName"/>
+ -->
+</bean>
+
+</beans>
