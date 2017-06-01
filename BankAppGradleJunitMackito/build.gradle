@@ -1,0 +1,21 @@
+apply plugin: 'java'
+
+group = 'BankAppGradleJunitMackito'
+version = '0.0.1-SNAPSHOT'
+
+description = 'My bank Application'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+   
+repositories {
+    maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+      testCompile 'junit:junit:4.11'
+      compile 'org.mockito:mockito-all:1.10.19'
+}
+task wrapper(type: Wrapper){
+	gradleVersion = '3.0'
+}
